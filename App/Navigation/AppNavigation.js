@@ -19,6 +19,7 @@ import AuthLoadingScreen from '../Containers/AuthLoadingScreen/AuthLoadingScreen
 import Tabbar1Forward from '../Containers/Tabbar1/Tabbar1Forward'
 import Tabbar1First from '../Containers/Tabbar1/Tabbar1First'
 import Tabbar1Second from '../Containers/Tabbar1/Tabbar1Second'
+import CameraRollScreen from '../Containers/CameraRoll/CameraRollScreen';
 
 const Tabbar1FirstNav = createStackNavigator(
   {
@@ -108,10 +109,17 @@ const AuthStackNav = createStackNavigator(
   }
 )
 
+const CameraRollNav = createStackNavigator(
+  {
+    CameraRollScreen: {screen: CameraRollScreen}
+  }
+)
+
 const App = createStackNavigator(
   {
     TabbarNav: TabbarNav,
-    HomeScreen: HomeNav
+    HomeScreen: HomeNav,
+    CameraRollScreen: CameraRollNav
   }, {
     mode: 'modal',
     headerMode: 'none'

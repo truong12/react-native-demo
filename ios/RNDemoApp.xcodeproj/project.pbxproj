@@ -44,6 +44,7 @@
 		3986CEAFD925D158FC1AE3FC /* libPods-RNDemoApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFCA2ABACB5B144FA3F21CB /* libPods-RNDemoApp-tvOSTests.a */; };
 		4015F7C74C1F42C7AA67B3DA /* libPods-RNDemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 251F28173C3921F2DE84EE89 /* libPods-RNDemoApp.a */; };
 		4DF25EC2EFBA41A497C58B33 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C73195F0A9646F5BA25699B /* Entypo.ttf */; };
+		656CC7F5224B5B9300469FCB /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 656CC7F4224B5B7700469FCB /* libRCTCameraRoll.a */; };
 		7302D28A34D04433B539835B /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F1288AE3E34491DAD4284D5 /* FontAwesome.ttf */; };
 		7B6901293B9947A7892FC282 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61FB1437157C4564ABA57E01 /* FontAwesome5_Regular.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -313,6 +314,13 @@
 			remoteGlobalIDString = 2D2A28201D9B03D100D4039D;
 			remoteInfo = "RCTAnimation-tvOS";
 		};
+		656CC7F3224B5B7700469FCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 656CC7EF224B5B7700469FCB /* RCTCameraRoll.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5115D1A9E6B3D00147676;
+			remoteInfo = RCTCameraRoll;
+		};
 		658CE158224B583400BE3DB5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 453EAE87B49E4B30B0ACDEFB /* RNGestureHandler.xcodeproj */;
@@ -382,6 +390,7 @@
 		4C73195F0A9646F5BA25699B /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		61FB1437157C4564ABA57E01 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		656CC7EF224B5B7700469FCB /* RCTCameraRoll.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCameraRoll.xcodeproj; path = "../node_modules/react-native/Libraries/CameraRoll/RCTCameraRoll.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7BAAAF58A0B24F01A1AC4257 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -415,6 +424,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656CC7F5224B5B9300469FCB /* libRCTCameraRoll.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -597,6 +607,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		656CC7F0224B5B7700469FCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				656CC7F4224B5B7700469FCB /* libRCTCameraRoll.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		658CE12F224B583400BE3DB5 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -625,6 +643,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				656CC7EF224B5B7700469FCB /* RCTCameraRoll.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -815,7 +834,13 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = BVXFF2D5X8;
+						ProvisioningStyle = Manual;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = BVXFF2D5X8;
+						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -851,6 +876,10 @@
 				{
 					ProductGroup = ADBDB9201DFEBF0600ED6528 /* Products */;
 					ProjectRef = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
+				},
+				{
+					ProductGroup = 656CC7F0224B5B7700469FCB /* Products */;
+					ProjectRef = 656CC7EF224B5B7700469FCB /* RCTCameraRoll.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
@@ -1142,6 +1171,13 @@
 			remoteRef = 5E9157341DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		656CC7F4224B5B7700469FCB /* libRCTCameraRoll.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTCameraRoll.a;
+			remoteRef = 656CC7F3224B5B7700469FCB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		658CE159224B583400BE3DB5 /* libRNGestureHandler.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1408,6 +1444,8 @@
 			baseConfigurationReference = B795CF8BF7CC761B4375499C /* Pods-RNDemoAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = BVXFF2D5X8;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1429,6 +1467,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNDemoApp.app/RNDemoApp";
 			};
 			name = Debug;
@@ -1438,7 +1477,9 @@
 			baseConfigurationReference = 1236E52E0FFD0FD6F55E2FC4 /* Pods-RNDemoAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = BVXFF2D5X8;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
@@ -1456,6 +1497,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNDemoApp.app/RNDemoApp";
 			};
 			name = Release;
@@ -1465,8 +1507,10 @@
 			baseConfigurationReference = C93D7574E8F42A05A6D1C8E4 /* Pods-RNDemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = BVXFF2D5X8;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
@@ -1478,8 +1522,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.truongnguyen.test;
 				PRODUCT_NAME = RNDemoApp;
+				PROVISIONING_PROFILE_SPECIFIER = TruongNguyenDev;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1489,7 +1534,9 @@
 			baseConfigurationReference = 916D782287EF66AE619A7F77 /* Pods-RNDemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BVXFF2D5X8;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
@@ -1501,8 +1548,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.truongnguyen.test;
 				PRODUCT_NAME = RNDemoApp;
+				PROVISIONING_PROFILE_SPECIFIER = TruongNguyenDev;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
