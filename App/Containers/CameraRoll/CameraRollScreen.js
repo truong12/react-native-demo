@@ -4,6 +4,8 @@ import { Text, View, Dimensions, Image, Animated, PanResponder, CameraRoll } fro
 const SCREEN_HEIGHT = Dimensions.get('window').height
 const SCREEN_WIDTH = Dimensions.get('window').width
 
+import Carousel, { ParallaxImage } from 'react-native-snap-carousel'
+
 class CameraRollScreen extends Component {
   state = {
     photos: []
@@ -62,7 +64,7 @@ class CameraRollScreen extends Component {
       console.log(r)
       this.setState({ photos: r.edges })
     }).catch((err) => {
-          // Error Loading Images
+            // Error Loading Images
     })
 
     this.PanResponder = PanResponder.create({
@@ -119,7 +121,7 @@ class CameraRollScreen extends Component {
 
             <Image
               style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 20 }}
-              source={{uri: item.node.image.uri}} />
+              source={{ uri: item.node.image.uri }} />
 
           </Animated.View>
         )
@@ -147,7 +149,7 @@ class CameraRollScreen extends Component {
 
             <Image
               style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 20 }}
-              source={item.node.image.uri} />
+              source={{ uri: item.node.image.uri }} />
 
           </Animated.View>
         )
@@ -155,14 +157,51 @@ class CameraRollScreen extends Component {
     }).reverse()
   }
 
+    //   render () {
+    //     return (
+    //       <View style={{ flex: 1 }}>
+    //         <View style={{ height: 60 }} />
+    //         <View style={{ flex: 1 }}>
+    //           {this.state.photos.length > 0 && this.renderUsers()}
+    //         </View>
+    //         <View style={{ height: 60 }} />
+
+    //       </View>
+
+    //     )
+    //   }
+
+  _renderItem ({ item, index }, parallaxProps) {
+    console.log(item)
+    return (
+
+      <View style={{
+        width: '100%',
+        height: '100%',
+        padding: 10
+      }}>
+        <ParallaxImage
+          source={{ uri: item.node.image.uri }}
+          containerStyle={{ flex: 1, resizeMode: 'cover', borderRadius: 20 }}
+          style={{ flex: 1, resizeMode: 'cover', borderRadius: 20 }}
+          parallaxFactor={0.4}
+          {...parallaxProps}
+                />
+      </View>
+    )
+  }
+
   render () {
     return (
       <View style={{ flex: 1 }}>
-        <View style={{ height: 60 }} />
-        <View style={{ flex: 1 }}>
-          {this.state.photos.length > 0 && this.renderUsers()}
-        </View>
-        <View style={{ height: 60 }} />
+        <View style={{ height: 20 }} />
+        <Carousel
+          data={this.state.photos}
+          renderItem={this._renderItem}
+          hasParallaxImages
+          sliderWidth={SCREEN_WIDTH}
+          itemWidth={SCREEN_WIDTH} />
+        <View style={{ height: 40 }} />
 
       </View>
 
