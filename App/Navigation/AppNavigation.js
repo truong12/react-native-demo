@@ -20,6 +20,7 @@ import Tabbar1Forward from '../Containers/Tabbar1/Tabbar1Forward'
 import Tabbar1First from '../Containers/Tabbar1/Tabbar1First'
 import Tabbar1Second from '../Containers/Tabbar1/Tabbar1Second'
 import CameraRollScreen from '../Containers/CameraRoll/CameraRollScreen';
+import ImagePickerScreen from '../Containers/ImagePicker/ImagePickerScreen';
 
 const Tabbar1FirstNav = createStackNavigator(
   {
@@ -115,11 +116,18 @@ const CameraRollNav = createStackNavigator(
   }
 )
 
+const ImagePickerNav = createStackNavigator(
+  {
+    ImagePickerScreen: {screen: ImagePickerScreen}
+  }
+)
+
 const App = createStackNavigator(
   {
     TabbarNav: TabbarNav,
     HomeScreen: HomeNav,
-    CameraRollScreen: CameraRollNav
+    CameraRollScreen: CameraRollNav,
+    ImagePickerScreen: ImagePickerNav
   }, {
     mode: 'modal',
     headerMode: 'none'

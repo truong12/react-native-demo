@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { SafeAreaView, Text } from 'react-native'
+import { View, Text } from 'react-native'
 import { Button } from 'react-native-elements'
 
 // Styles
@@ -12,14 +12,14 @@ class Tabbar1 extends Component {
 
   render () {
     return (
-      <SafeAreaView style={styles.mainContainer}>
+      <View style={styles.mainContainer}>
         <Text style={styles.titleText}>Tabbar1</Text>
         <Button
           buttonStyle={styles.loginButton}
           onPress={() => this.tabbar1Press()}
           title='Tabbar1 Press'
                 />
-      </SafeAreaView>
+      </View>
     )
   }
 }

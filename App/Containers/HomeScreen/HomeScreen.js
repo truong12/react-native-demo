@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { SafeAreaView, Text } from 'react-native'
+import { View, Text } from 'react-native'
 import { Button } from 'react-native-elements'
 
 // Styles
@@ -17,7 +17,7 @@ class HomeScreen extends Component {
 
   render () {
     return (
-      <SafeAreaView style={styles.mainContainer}>
+      <View style={styles.mainContainer}>
         <Text style={styles.titleText}>HomeScreen</Text>
         <Button
           buttonStyle={styles.loginButton}
@@ -29,7 +29,7 @@ class HomeScreen extends Component {
           onPress={() => this.onNextPress()}
           title='Next'
                 />
-      </SafeAreaView>
+      </View>
     )
   }
 }

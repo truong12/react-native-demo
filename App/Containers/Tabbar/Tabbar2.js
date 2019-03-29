@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { SafeAreaView, Text, AsyncStorage } from 'react-native'
+import { View, Text, AsyncStorage } from 'react-native'
 import { Button } from 'react-native-elements'
 // Redux
 import Tabbar1Action from '../../Redux/Tabbar1Redux/Tabbar1Redux'
@@ -27,9 +27,13 @@ class Tabbar2 extends Component {
     this.props.navigation.push('CameraRollScreen')
   }
 
+  onTapImagePicker = () => {
+    this.props.navigation.push('ImagePickerScreen')
+  }
+
   render () {
     return (
-      <SafeAreaView style={styles.mainContainer}>
+      <View style={styles.mainContainer}>
         <Text style={styles.titleText}>Tabbar2</Text>
         <Button
           buttonStyle={styles.loginButton}
@@ -53,7 +57,13 @@ class Tabbar2 extends Component {
           title='Camera Roll'
         />
 
-      </SafeAreaView>
+        <Button
+          buttonStyle={styles.loginButton}
+          onPress={() => this.onTapImagePicker()}
+          title='ImagePicker'
+        />
+
+      </View>
     )
   }
 }

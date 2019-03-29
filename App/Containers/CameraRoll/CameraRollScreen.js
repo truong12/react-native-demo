@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import { Text, View, Dimensions, Image, Animated, PanResponder, CameraRoll } from 'react-native'
+import { Text, View, Dimensions, Image, Animated, PanResponder, CameraRoll, PermissionsAndroid } from 'react-native'
+import Carousel, { ParallaxImage } from 'react-native-snap-carousel'
 
 const SCREEN_HEIGHT = Dimensions.get('window').height
 const SCREEN_WIDTH = Dimensions.get('window').width
-
-import Carousel, { ParallaxImage } from 'react-native-snap-carousel'
 
 class CameraRollScreen extends Component {
   state = {
@@ -56,16 +55,32 @@ class CameraRollScreen extends Component {
       extrapolate: 'clamp'
     })
   }
-  componentDidMount () {
-    CameraRoll.getPhotos({
-      first: 20,
-      assetType: 'All'
-    }).then(r => {
-      console.log(r)
-      this.setState({ photos: r.edges })
-    }).catch((err) => {
-            // Error Loading Images
-    })
+  componentDidMount = async () => {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
+        {
+          'title': 'Access Storage',
+          'message': 'Access Storage for the pictures'
+        }
+      )
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        CameraRoll.getPhotos({
+          first: 20,
+          assetType: 'Photos'
+        }).then(r => {
+          console.log(r)
+          this.setState({ photos: r.edges })
+        }).catch((err) => {
+                // Error Loading Images
+          console.log(err)
+        })
+      } else {
+        console.log('Storage permission denied')
+      }
+    } catch (err) {
+      console.warn(err)
+    }
 
     this.PanResponder = PanResponder.create({
 
@@ -180,13 +195,18 @@ class CameraRollScreen extends Component {
         height: '100%',
         padding: 10
       }}>
-        <ParallaxImage
+        {/* <ParallaxImage
           source={{ uri: item.node.image.uri }}
           containerStyle={{ flex: 1, resizeMode: 'cover', borderRadius: 20 }}
           style={{ flex: 1, resizeMode: 'cover', borderRadius: 20 }}
           parallaxFactor={0.4}
           {...parallaxProps}
-                />
+                /> */}
+
+        <Image
+          source={{ uri: item.node.image.uri }}
+          style={{ flex: 1, resizeMode: 'cover', borderRadius: 20 }}
+        />
       </View>
     )
   }
