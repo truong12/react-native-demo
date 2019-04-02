@@ -56,31 +56,44 @@ class CameraRollScreen extends Component {
     })
   }
   componentDidMount = async () => {
-    try {
-      const granted = await PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
-        {
-          'title': 'Access Storage',
-          'message': 'Access Storage for the pictures'
-        }
-      )
-      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        CameraRoll.getPhotos({
-          first: 20,
-          assetType: 'Photos'
-        }).then(r => {
-          console.log(r)
-          this.setState({ photos: r.edges })
-        }).catch((err) => {
-                // Error Loading Images
-          console.log(err)
-        })
-      } else {
-        console.log('Storage permission denied')
-      }
-    } catch (err) {
-      console.warn(err)
-    }
+    // Android
+    // try {
+    //   const granted = await PermissionsAndroid.request(
+    //     PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
+    //     {
+    //       'title': 'Access Storage',
+    //       'message': 'Access Storage for the pictures'
+    //     }
+    //   )
+    //   if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+    //     CameraRoll.getPhotos({
+    //       first: 20,
+    //       assetType: 'Photos'
+    //     }).then(r => {
+    //       console.log(r)
+    //       this.setState({ photos: r.edges })
+    //     }).catch((err) => {
+    //             // Error Loading Images
+    //       console.log(err)
+    //     })
+    //   } else {
+    //     console.log('Storage permission denied')
+    //   }
+    // } catch (err) {
+    //   console.warn(err)
+    // }
+
+    // iOS
+    CameraRoll.getPhotos({
+      first: 20,
+      assetType: 'Photos'
+    }).then(r => {
+      console.log(r)
+      this.setState({ photos: r.edges })
+    }).catch((err) => {
+            // Error Loading Images
+      console.log(err)
+    })
 
     this.PanResponder = PanResponder.create({
 

@@ -45,6 +45,7 @@
 		4015F7C74C1F42C7AA67B3DA /* libPods-RNDemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 251F28173C3921F2DE84EE89 /* libPods-RNDemoApp.a */; };
 		4DF25EC2EFBA41A497C58B33 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C73195F0A9646F5BA25699B /* Entypo.ttf */; };
 		656CC7F5224B5B9300469FCB /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 656CC7F4224B5B7700469FCB /* libRCTCameraRoll.a */; };
+		659A69A42253164700DC54A7 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659A697C2253164700DC54A7 /* JavaScriptCore.framework */; };
 		7302D28A34D04433B539835B /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F1288AE3E34491DAD4284D5 /* FontAwesome.ttf */; };
 		7B6901293B9947A7892FC282 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61FB1437157C4564ABA57E01 /* FontAwesome5_Regular.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -391,6 +392,7 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		61FB1437157C4564ABA57E01 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		656CC7EF224B5B7700469FCB /* RCTCameraRoll.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCameraRoll.xcodeproj; path = "../node_modules/react-native/Libraries/CameraRoll/RCTCameraRoll.xcodeproj"; sourceTree = "<group>"; };
+		659A697C2253164700DC54A7 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7BAAAF58A0B24F01A1AC4257 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659A69A42253164700DC54A7 /* JavaScriptCore.framework in Frameworks */,
 				656CC7F5224B5B9300469FCB /* libRCTCameraRoll.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
@@ -589,6 +592,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				659A697C2253164700DC54A7 /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
 				251F28173C3921F2DE84EE89 /* libPods-RNDemoApp.a */,
 				15865C214380F366CEC05B25 /* libPods-RNDemoApp-tvOS.a */,
@@ -858,6 +862,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
