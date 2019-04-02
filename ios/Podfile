@@ -7,14 +7,6 @@ target 'RNDemoApp' do
 
   # Pods for RNDemoApp
 
-  pod 'react-native-config', :path => '../node_modules/react-native-config'
-
-  pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
-
-  pod 'RNI18n', :path => '../node_modules/react-native-i18n'
-
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
-
   target 'RNDemoAppTests' do
     inherit! :search_paths
     # Pods for testing
