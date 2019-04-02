@@ -86,7 +86,8 @@ class CameraRollScreen extends Component {
     // iOS
     CameraRoll.getPhotos({
       first: 20,
-      assetType: 'Photos'
+      assetType: 'All',
+      groupTypes: 'All'
     }).then(r => {
       console.log(r)
       this.setState({ photos: r.edges })
