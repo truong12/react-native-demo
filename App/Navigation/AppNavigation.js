@@ -21,6 +21,7 @@ import Tabbar1First from '../Containers/Tabbar1/Tabbar1First'
 import Tabbar1Second from '../Containers/Tabbar1/Tabbar1Second'
 import CameraRollScreen from '../Containers/CameraRoll/CameraRollScreen';
 import ImagePickerScreen from '../Containers/ImagePicker/ImagePickerScreen';
+import GooglePlacesAutocompleteScreen from '../Containers/GooglePlacesAutocomplete/GooglePlacesAutocompleteScreen';
 
 const Tabbar1FirstNav = createStackNavigator(
   {
@@ -122,12 +123,19 @@ const ImagePickerNav = createStackNavigator(
   }
 )
 
+const GooglePlacesAutocompleteScreenNav = createStackNavigator(
+  {
+    GooglePlacesAutocompleteScreen: {screen: GooglePlacesAutocompleteScreen}
+  }
+)
+
 const App = createStackNavigator(
   {
     TabbarNav: TabbarNav,
     HomeScreen: HomeNav,
     CameraRollScreen: CameraRollNav,
-    ImagePickerScreen: ImagePickerNav
+    ImagePickerScreen: ImagePickerNav,
+    GooglePlacesAutocompleteScreen: GooglePlacesAutocompleteScreenNav
   }, {
     mode: 'modal',
     headerMode: 'none'

@@ -31,6 +31,10 @@ class Tabbar2 extends Component {
     this.props.navigation.push('ImagePickerScreen')
   }
 
+  onTapGooglePlaces () {
+    this.props.navigation.push('GooglePlacesAutocompleteScreen')
+  }
+
   render () {
     return (
       <View style={styles.mainContainer}>
@@ -61,6 +65,12 @@ class Tabbar2 extends Component {
           buttonStyle={styles.loginButton}
           onPress={() => this.onTapImagePicker()}
           title='ImagePicker'
+        />
+
+        <Button
+          buttonStyle={styles.loginButton}
+          onPress={() => this.onTapGooglePlaces()}
+          title='Google Places'
         />
 
       </View>
